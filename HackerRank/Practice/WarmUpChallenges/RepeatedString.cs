@@ -7,11 +7,11 @@ namespace Practice.WarmUpChallenges
     {
         public static long Execute(string s, long n)
         {
-            long groups = (long)(n / s.Length);
+            long groups = n / s.Length;
             long diff = n - (s.Length * groups);
             string aux = s.Substring(0, (int)diff);
 
-            return (s.Count(c => c == 'a') * groups + aux.Count(c => c == 'a'));
+            return s.Count(c => c == 'a') * groups + aux.Count(c => c == 'a');
         }
     }
 }
